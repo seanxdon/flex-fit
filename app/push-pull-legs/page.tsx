@@ -41,10 +41,10 @@ export default function PushPullLegs() {
     <>
       <main className="h-screen max-h-fit bg-black/70 bg-[url('./assets/pushPullLegs-dark.jpeg')]">
       <Header/>
-        <form className="my-10 flex flex-row max-[800px]:flex-col justify-center text-center" onSubmit={onSubmit}>
+        <form className="my-10 flex flex-row max-[1050px]:flex-col justify-center text-center" onSubmit={onSubmit}>
           <div>
             <input
-              className="rounded-md p-2 m-2 text-black w-60"
+              className="rounded-md p-2 m-2 text-black w-80"
               type="number"
               min={3}
               max={7}
@@ -52,7 +52,7 @@ export default function PushPullLegs() {
               placeholder="# of workouts per week"
             />
             <input
-              className="rounded-md p-2 m-2 text-black w-60"
+              className="rounded-md p-2 m-2 text-black w-80"
               type="number"
               min={3}
               max={20}
@@ -62,7 +62,7 @@ export default function PushPullLegs() {
           </div>
           <div>
             <button
-              className="border-none bg-cyan-500 hover:bg-cyan-400 p-2 m-2 rounded-md w-30"
+              className="border-none bg-cyan-500 hover:bg-cyan-400 p-2 m-2 rounded-md w-60"
               type="submit"
             >
               Generate Workout

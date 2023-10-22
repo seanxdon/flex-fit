@@ -37,7 +37,7 @@ export default function PushPullLegs() {
 
   return (
     <>
-    <div className="bg-repeat min-h-max bg-black/70 bg-[url('https://images.unsplash.com/photo-1652363722833-509b3aac287b?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]">
+    <div className="h-screen max-h-fit bg-black/70 bg-[url('https://images.unsplash.com/photo-1652363722833-509b3aac287b?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]">
     <Header />
       <main>
         <form className="my-10 flex flex-row max-[800px]:flex-col justify-center text-center" onSubmit={onSubmit}>
@@ -76,7 +76,7 @@ export default function PushPullLegs() {
             </Link>
           </div>
         </form>
-        <section className="mb-auto">
+        <section className="">
         {generatedWorkout && (
           <>
             <div className="space-y-2 px-5 w-full flex flex-col items-center justify-center max-w-xl mx-auto">
@@ -89,7 +89,7 @@ export default function PushPullLegs() {
                       className="bg-white text-black rounded-xl shadow-md p-4 hover:bg-gray-100 transition border"
                       key={workouts}
                     >
-                      <p className="">{workouts}</p>
+                      <p className="text-sm">{workouts}</p>
                     </div>
                   );
                 })}

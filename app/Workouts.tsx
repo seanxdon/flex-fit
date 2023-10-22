@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image';
 
 export default function Workouts() {
   const menuItem = [
@@ -41,13 +42,13 @@ export default function Workouts() {
       <h1 className="my-5 uppercase font-sans tracking-tight text-5xl text-cyan-100	font-bold">Select <br></br>Workout</h1>
       {menuItem.map(({ text, page, subtitle, image, altImg}, index) => {
         return (
-          <Link href={page}>
-            <div key={index} className="rounded-xl relative my-5">
+          <Link key={index} href={page}>
+            <div className="rounded-xl relative my-5">
               <div className="absolute w-full h-full bg-black/70 rounded-xl text-white">
                 <p className="font-bold text-2xl px-2 pt-4">{text} </p>
                 <p className="px-2">{subtitle}</p>
               </div>
-              <img
+              <Image
                 className="max-h-[160px]  md:max-h-[200px] w-full object-cover rounded-xl"
                 src={image}
                 alt={altImg}

@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import Link from 'next/link'
 
@@ -39,11 +38,11 @@ export default function Workouts() {
 
   return (
     <div className="w-10/12 p-4 py-12 flex flex-col">
-      <h1 className="m-5 uppercase font-sans tracking-tight sm:text-6xl text-cyan-100	font-bold">Select <br></br>Workout</h1>
+      <h1 className="my-5 uppercase font-sans tracking-tight text-5xl text-cyan-100	font-bold">Select <br></br>Workout</h1>
       {menuItem.map(({ text, page, subtitle, image, altImg}, index) => {
         return (
           <Link href={page}>
-            <div key={index} className="rounded-xl relative m-5">
+            <div key={index} className="rounded-xl relative my-5">
               <div className="absolute w-full h-full bg-black/70 rounded-xl text-white">
                 <p className="font-bold text-2xl px-2 pt-4">{text} </p>
                 <p className="px-2">{subtitle}</p>

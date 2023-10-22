@@ -14,7 +14,7 @@ export default function PushPullLegs() {
   const { messages , handleInputChange, handleSubmit } = 
   useChat({
     body: {
-      workout: "Push Pull Legs",
+      workout: "Push/Pull/Legs",
       days: days,
       exercises: exercises,
     }
@@ -39,9 +39,8 @@ export default function PushPullLegs() {
 
   return (
     <>
-    <div className="h-screen max-h-fit bg-black/70 bg-[url('https://images.unsplash.com/photo-1652363722833-509b3aac287b?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]">
-    <Header/>
-      <main>
+      <main className="h-screen max-h-fit bg-black/70 bg-[url('./assets/pushPullLegs-dark.jpeg')]">
+      <Header/>
         <form className="my-10 flex flex-row max-[800px]:flex-col justify-center text-center" onSubmit={onSubmit}>
           <div>
             <input
@@ -100,7 +99,6 @@ export default function PushPullLegs() {
           )}
         </section>
       </main>
-    </div>
     </>
   )
 }

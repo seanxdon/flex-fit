@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image';
 
 export default function Workouts() {
   const menuItem = [
@@ -48,7 +47,7 @@ export default function Workouts() {
                 <p className="font-bold text-2xl px-2 pt-4">{text} </p>
                 <p className="px-2">{subtitle}</p>
               </div>
-              <Image
+              <img
                 className="max-h-[160px]  md:max-h-[200px] w-full object-cover rounded-xl"
                 src={image}
                 alt={altImg}

@@ -37,7 +37,7 @@ export default function Workouts() {
   ];
 
   return (
-    <div className="w-10/12 p-4 py-12 flex flex-col">
+    <div className="w-10/12 py-12 flex flex-col">
       <h1 className="my-5 uppercase font-sans tracking-tight text-5xl text-cyan-100	font-bold">Select <br></br>Workout</h1>
       {menuItem.map(({ text, page, subtitle, image, altImg}, index) => {
         return (

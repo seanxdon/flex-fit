@@ -1,8 +1,8 @@
 'use client'
  
 import { useChat } from 'ai/react'
-import Link from 'next/link';
 import { useState } from 'react';
+import Link from 'next/link';
 import Header from '../Header';
  
 export default function PushPullLegs() {
@@ -44,6 +44,7 @@ export default function PushPullLegs() {
           <input
             className="rounded-md p-2 m-2 text-black w-1/3"
             type="number"
+            min={3}
             max={7}
             onChange={onChangeDays}
             placeholder="# of workouts per week"
@@ -51,6 +52,7 @@ export default function PushPullLegs() {
           <input
             className="rounded-md p-2 m-2 text-black w-1/3"
             type="number"
+            min={4}
             max={20}
             onChange={onChangeExercises}
             placeholder="# of exercises per workout"

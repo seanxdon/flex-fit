@@ -4,7 +4,9 @@ import { useChat } from 'ai/react'
 import { useState } from 'react';
 import Link from 'next/link';
 import Header from '../Header';
- 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHouse } from '@fortawesome/free-solid-svg-icons'
+
 export default function PushPullLegs() {
   const [days, setDays] = useState("");
   const [exercises, setExercises] = useState("");
@@ -38,7 +40,7 @@ export default function PushPullLegs() {
   return (
     <>
     <div className="h-screen max-h-fit bg-black/70 bg-[url('https://images.unsplash.com/photo-1652363722833-509b3aac287b?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]">
-    <Header />
+    <Header/>
       <main>
         <form className="my-10 flex flex-row max-[800px]:flex-col justify-center text-center" onSubmit={onSubmit}>
           <div>
@@ -53,7 +55,7 @@ export default function PushPullLegs() {
             <input
               className="rounded-md p-2 m-2 text-black w-60"
               type="number"
-              min={4}
+              min={3}
               max={20}
               onChange={onChangeExercises}
               placeholder="# of exercises per workout"
@@ -71,17 +73,17 @@ export default function PushPullLegs() {
                 className="border-none bg-cyan-500 hover:bg-cyan-400 p-2 m-2 rounded-md w-16"
                 type="submit"
               >
-                Home
+                <FontAwesomeIcon icon={faHouse} />
               </button>
             </Link>
           </div>
         </form>
-        <section className="">
+        <section className="w-full">
         {generatedWorkout && (
           <>
             <div className="space-y-2 px-5 w-full flex flex-col items-center justify-center max-w-xl mx-auto">
               {generatedWorkout
-                .substring(generatedWorkout.indexOf('Monday') + 0)
+                .substring(generatedWorkout.indexOf('Monday'))
                 .split(/[\r]?\n[\r]?\n/g)
                 .map((workouts) => {
                   return (

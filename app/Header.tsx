@@ -4,8 +4,8 @@ export default function Header() {
   return (
     <header className="flex justify-between items-center w-full border-b-2 pb-6 ">
       <Link href="/" className="flex">
-        <h1 className="text-4xl tracking-tight">
-          flex<b>fit</b>
+        <h1 className="text-4xl tracking-tight text-cyan-100">
+          <b>flexfit</b>.ai
         </h1>
       </Link>
     </header>

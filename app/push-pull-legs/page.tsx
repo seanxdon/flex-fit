@@ -1,14 +1,35 @@
-import { Metadata } from "next";
+'use client'
+import { useChat } from 'ai/react';
 
-export const metadata: Metadata = {
-  title: 'Push Pull Legs Workout',
-  description: '',
-}
-export default async function PushPullLegs() {
+export default function PushPullLegs() {
+
+  const { messages, input, handleInputChange, handleSubmit } = useChat();
+
 
   return (
-    <div>
-      <h1>Push Pull Legs Workout</h1>
-    </div>
-  )
+    <main className="mx-auto w-full h-screen p-24 flex flex-col">
+      <section className="mb-auto m">
+        {messages.map(m => (
+          <div className="mb-4" key={m.id}>
+            {m.role === 'user' ? 'User: ' : 'AI: '}
+            {m.content}
+          </div>
+        ))}
+      </section>
+      <form className="flex space-x-4" onSubmit={handleSubmit}>
+        <input
+          className="rounded-md p-2 text-black"
+          value={input}
+          onChange={handleInputChange}
+          placeholder="Say something..."
+        />
+        <button
+          className="border-solid border-2 border-white p-2 rounded-md"
+          type="submit"
+        >
+          Send
+        </button>
+      </form>
+    </main>
+  );
 }

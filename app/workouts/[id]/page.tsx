@@ -1,20 +1,23 @@
 'use client'
- 
+
+import React from 'react'
 import { useChat } from 'ai/react'
 import { useState } from 'react';
 import Link from 'next/link';
-import Header from '../Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse } from '@fortawesome/free-solid-svg-icons'
 
-export default function UpperLowerSplit() {
+export default function WorkoutPlanGenerator({ params }: {
+  params: {id: string}
+}) {
+  
   const [days, setDays] = useState("");
   const [exercises, setExercises] = useState("");
 
   const { messages , handleInputChange, handleSubmit } = 
   useChat({
     body: {
-      workout: "Upper Body/Lower Body Split",
+      workout: `${params.id}`,
       days: days,
       exercises: exercises,
     }
@@ -39,8 +42,7 @@ export default function UpperLowerSplit() {
 
   return (
     <>
-      <main className="h-screen max-h-fit bg-black/70 bg-[url('./assets/upperLower-dark.jpeg')]">
-      <Header/>
+      <main className="h-screen max-h-fit bg-black/70 bg-[url('./assets/pushPullLegs-dark.jpeg')]">
         <form className="my-10 flex flex-row max-[1050px]:flex-col justify-center text-center" onSubmit={onSubmit}>
           <div>
             <input
@@ -102,3 +104,4 @@ export default function UpperLowerSplit() {
     </>
   )
 }
+

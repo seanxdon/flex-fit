@@ -42,7 +42,7 @@ export default function WorkoutPlanGenerator({ params }: {
 
   return (
     <>
-      <main className="h-screen max-h-fit bg-black/70 bg-[url('./assets/pushPullLegs-dark.jpeg')]">
+      <main className="h-screen max-h-fit bg-black/70 bg-[url('./assets/gym-background.jpeg')]">
         <form className="my-10 flex flex-row max-[1050px]:flex-col justify-center text-center" onSubmit={onSubmit}>
           <div>
             <input

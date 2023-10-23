@@ -1,11 +1,10 @@
-import Image from 'next/image'
-import Header from './Header'
-import Workouts from './Workouts'
+import WorkoutsList from "./workouts/page";
+import Header from "./Header";
 export default function Home() {
   return (
     <main className="flex flex-col items-center">
       <Header />
-      <Workouts />
+      <WorkoutsList />
     </main>
   )
 }

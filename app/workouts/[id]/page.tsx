@@ -1,19 +1,23 @@
 'use client'
- 
+
+import React from 'react'
 import { useChat } from 'ai/react'
 import { useState } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse } from '@fortawesome/free-solid-svg-icons'
 
-export default function PushPullLegs() {
+export default function WorkoutType({ params }: {
+  params: {id: string}
+}) {
+  
   const [days, setDays] = useState("");
   const [exercises, setExercises] = useState("");
 
   const { messages , handleInputChange, handleSubmit } = 
   useChat({
     body: {
-      workout: "Push/Pull/Legs",
+      workout: `${params.id}`,
       days: days,
       exercises: exercises,
     }
@@ -100,3 +104,4 @@ export default function PushPullLegs() {
     </>
   )
 }
+

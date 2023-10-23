@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse } from '@fortawesome/free-solid-svg-icons'
 
-export default function workoutPlanGenerator({ params }: {
+export default function WorkoutPlanGenerator({ params }: {
   params: {id: string}
 }) {
   

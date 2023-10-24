@@ -48,6 +48,7 @@ export default function WorkoutPlanGenerator({ params }: {
             <input
               className="rounded-md p-2 m-2 text-black w-80"
               type="number"
+              required
               min={3}
               max={7}
               onChange={onChangeDays}
@@ -56,8 +57,9 @@ export default function WorkoutPlanGenerator({ params }: {
             <input
               className="rounded-md p-2 m-2 text-black w-80"
               type="number"
+              required
               min={3}
-              max={20}
+              max={10}
               onChange={onChangeExercises}
               placeholder="# of exercises per workout"
             />

@@ -40,9 +40,9 @@ export default function WorkoutPlanGenerator({ params }: {
   const generatedWorkout = lastMessage?.role === "assistant" ? lastMessage.content : null;
 
   return (
-    <>
-      <main className="h-screen max-h-fit bg-black/70 bg-[url('./assets/gym-background.jpeg')]">
-        <Header />
+    <div>
+      <main className="lg:h-[150vh] h-[200vh] bg-black/70 bg-[url('./assets/gym-background.jpeg')]">
+      <Header />
         <form className="my-10 flex flex-row max-[1050px]:flex-col justify-center text-center" onSubmit={onSubmit}>
           <div>
             <input
@@ -79,7 +79,7 @@ export default function WorkoutPlanGenerator({ params }: {
             </Link>
           </div>
         </form>
-        <section className="w-full">
+        <section className="w-full h-fit">
         {generatedWorkout && (
           <>
             <div className="space-y-2 px-5 w-full flex flex-col items-center justify-center max-w-xl mx-auto">
@@ -101,7 +101,7 @@ export default function WorkoutPlanGenerator({ params }: {
           )}
         </section>
       </main>
-    </>
+    </div>
   )
 }
 

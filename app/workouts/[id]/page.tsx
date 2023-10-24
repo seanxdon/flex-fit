@@ -41,7 +41,7 @@ export default function WorkoutPlanGenerator({ params }: {
 
   return (
     <div>
-      <main className="h-[100vh] bg-black/70 bg-[url('./assets/gym-background.jpeg')]">
+      <main className="min-h-screen h-full bg-[url('./assets/workout-background.jpeg')]">
       <Header />
         <form className="my-10 flex flex-row max-[1050px]:flex-col justify-center text-center" onSubmit={onSubmit}>
           <div>
@@ -79,7 +79,7 @@ export default function WorkoutPlanGenerator({ params }: {
             </Link>
           </div>
         </form>
-        <section className="w-full h-fit">
+        <section className="w-full">
         {generatedWorkout && (
           <>
             <div className="space-y-2 px-5 w-full flex flex-col items-center justify-center max-w-xl mx-auto">
@@ -92,7 +92,7 @@ export default function WorkoutPlanGenerator({ params }: {
                       className="bg-white text-black rounded-xl shadow-md p-4 hover:bg-gray-100 transition border"
                       key={workouts}
                     >
-                      <p className="text-sm">{workouts}</p>
+                      <p className="text-xs lg:text-sm">{workouts}</p>
                     </div>
                   );
                 })}

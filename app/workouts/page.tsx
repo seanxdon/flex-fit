@@ -9,8 +9,8 @@ export default function WorkoutsList() {
       alt: "Push Pull Legs Workout Image",
     },
     {
-      title: "Chest Back Legs",
-      page: "/chest-back-legs",
+      title: "Chest Back Arms Legs",
+      page: "/chest-back-arms-legs",
       subtitle: "45-60 min",
       image:
         "https://plus.unsplash.com/premium_photo-1663134059475-5976ce4cc2d8?auto=format&fit=crop&q=80&w=2787&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -41,8 +41,8 @@ export default function WorkoutsList() {
         return (
           <div key={index}>
             <Link href={{pathname: `/workouts/${page}`}}>
-              <div className="rounded-xl relative my-5 transition ease-in-out hover:scale-110 duration-300">
-                <div className="absolute w-full h-full rounded-xl text-white hover:text-cyan-200 bg-black/70 hover:bg-black/80">
+              <div className="rounded-xl relative my-5 transition ease-in-out lg:hover:scale-110 duration-300">
+                <div className="absolute w-full h-full rounded-xl text-white lg:hover:text-cyan-200 bg-black/70 lg:hover:bg-black/80">
                   <p className="font-bold text-2xl px-2 pt-4">{title} </p>
                   <p className="px-2">{subtitle}</p>
                 </div>

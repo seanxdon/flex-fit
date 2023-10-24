@@ -1,12 +1,11 @@
 'use client'
 
-import React from 'react'
 import { useChat } from 'ai/react'
 import { useState } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse } from '@fortawesome/free-solid-svg-icons'
-
+import Header from '@/app/Header';
 export default function WorkoutPlanGenerator({ params }: {
   params: {id: string}
 }) {
@@ -43,6 +42,7 @@ export default function WorkoutPlanGenerator({ params }: {
   return (
     <>
       <main className="h-screen max-h-fit bg-black/70 bg-[url('./assets/gym-background.jpeg')]">
+        <Header />
         <form className="my-10 flex flex-row max-[1050px]:flex-col justify-center text-center" onSubmit={onSubmit}>
           <div>
             <input

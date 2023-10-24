@@ -11,7 +11,8 @@ type Workout = {
 
 export default function MyPlan() {
 
-  const [workoutPlan, setWorkoutPlan] = useState<any>(localStorage.getItem('workout-saved'));
+  // @ts-ignore
+  const [workoutPlan, setWorkoutPlan] = useState(localStorage.getItem('workout-saved') || "");
 
   useEffect(() => {
     localStorage.setItem('workout-saved', workoutPlan);

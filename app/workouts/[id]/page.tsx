@@ -92,7 +92,7 @@ export default function WorkoutPlanGenerator({ params }: {
                       className="bg-white text-black rounded-xl shadow-md p-4 hover:bg-gray-100 transition border"
                       key={workouts}
                     >
-                      <p className="text-xs lg:text-sm">{workouts}</p>
+                      <p className="text-sm">{workouts}</p>
                     </div>
                   );
                 })}

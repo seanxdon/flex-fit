@@ -35,14 +35,14 @@ export default function WorkoutsList() {
   ];
 
   return (
-    <div className="w-10/12 py-12 flex flex-col">
-      <h1 className="my-5 uppercase font-sans tracking-tight text-5xl text-cyan-100	font-bold">Select <br></br>Workout</h1>
+    <div className="w-10/12 pb-16 flex flex-col">
+      <h1 className="py-16 uppercase font-sans tracking-tight text-5xl text-cyan-200	font-bold">Select <br></br>Workout</h1>
       {workoutDetails.map(({ title, page, subtitle, image, alt}, index) => {
         return (
           <div key={index}>
             <Link href={{pathname: `/workouts/${page}`}}>
-              <div className="rounded-xl relative my-5">
-                <div className="absolute w-full h-full bg-black/70 rounded-xl text-white">
+              <div className="rounded-xl relative my-5 transition ease-in-out hover:scale-110 duration-300">
+                <div className="absolute w-full h-full rounded-xl text-white hover:text-cyan-200 bg-black/70 hover:bg-black/80">
                   <p className="font-bold text-2xl px-2 pt-4">{title} </p>
                   <p className="px-2">{subtitle}</p>
                 </div>

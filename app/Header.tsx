@@ -10,7 +10,7 @@ export default function Header() {
       </Link>
       <Link href="/my-plan">
         <h1 className="text-3xl tracking-tight text-cyan-200">
-        <span><b>My Plan</b></span>
+        <span><b>my plan</b></span>
         </h1>
       </Link>
     </header>

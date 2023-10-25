@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'FlexFit',
-  description: 'Your AI personal trainer! Take out the need of planning our your workout routine each week.',
+  description: 'Your AI personal trainer! Take out the need of planning your workout routine each week.',
 }
 
 export default function RootLayout({

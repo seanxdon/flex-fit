@@ -1,3 +1,18 @@
+Flex Fit - Your AI Personal Trainer 🏋🏽
+
+Live Demo: https://flex-fit-alpha.vercel.app/
+
+Tech Stack: Next.js | Tailwind | Vercel AI SDK
+
+Generate workout plans based on your training preferences.
+
+Change your training program at any time.
+
+Discover new workouts to add to your program.
+
+Happy Lifting! 💪🏼
+__________________________________________________________
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

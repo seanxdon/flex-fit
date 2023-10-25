@@ -1,8 +1,8 @@
-Flex Fit - Your AI Personal Trainer 🏋🏽
+Flex Fit - Your AI Personal Trainer 🏋
 
 Live Demo: https://flex-fit-alpha.vercel.app/
 
-Tech Stack: Next.js | Tailwind | Vercel AI SDK
+Tech Stack: Next.js | Tailwind CSS | Vercel AI SDK
 
 Generate workout plans based on your training preferences.
 

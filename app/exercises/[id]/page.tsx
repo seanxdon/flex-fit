@@ -12,6 +12,7 @@ export default function WorkoutPlanGenerator({ params }: {
   
   const [muscle, setMuscle] = useState("");
   const [exercises, setExercises] = useState("");
+  const [lettersOnlyInput, setLettersOnlyInput] = useState('');
 
   const { messages , handleInputChange, handleSubmit } = 
   useChat({
@@ -23,7 +24,10 @@ export default function WorkoutPlanGenerator({ params }: {
   })
 
   const onChangeMuscle = (e: any) => {
+    const result = e.target.value.replace(/[^a-z]/gi, '');
+    
     setMuscle(e.target.value);
+    setLettersOnlyInput(result)
     handleInputChange(e)
   }
 
@@ -49,6 +53,7 @@ export default function WorkoutPlanGenerator({ params }: {
               className="rounded-md p-2 m-2 text-black w-80"
               type="text"
               required
+              value={lettersOnlyInput}
               onChange={onChangeMuscle}
               placeholder="Which muscle are your training?"
             />

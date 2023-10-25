@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
 
 export default function Header() {
   return (
@@ -12,7 +10,7 @@ export default function Header() {
       </Link>
       <Link href="/my-plan">
         <h1 className="text-3xl tracking-tight text-cyan-200">
-        <span><FontAwesomeIcon icon={faBookOpen} /></span>
+        <span>My Plan</span>
         </h1>
       </Link>
     </header>

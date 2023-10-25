@@ -14,7 +14,7 @@ export default function ExercisesList() {
 
   return (
     <div className="w-10/12 pb-16 flex flex-col">
-      <h1 className="py-16 uppercase font-sans tracking-tight text-5xl text-cyan-200	font-bold">New<br></br>Exercises</h1>
+      <h1 className="py-16 uppercase font-sans tracking-tight text-5xl text-cyan-200	font-bold">Find<br></br>Exercises</h1>
       {workoutDetails.map(({ title, page, subtitle, image, alt}, index) => {
         return (
           <div key={index}>
